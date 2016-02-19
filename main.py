@@ -33,10 +33,19 @@ def duration():
     print_time([get_hour,get_minute],flag)
     sub.Popen("shutdown "+flag+" -f -t "+str(sleep_time),shell=True)
     cancel()
-    
+
+def instantly():
+    flag=get_method()
+    inp=input('Are you sure?[y]')
+    if inp.upper()=="Y":
+        sub.Popen("shutdown "+flag+" -f",shell=True)
+    else:
+        sys.exit()    
         
         
-def sleep_time_convert(now,get_hour,get_minute):
+def sleep_time_convert(get_hour,get_minute):
+    date_time=datetime.datetime.now()
+    now=str(date_time.time()).split(":")
     sleep_hour=get_hour-int(now[0])
     if sleep_hour<0:
         sleep_hour=sleep_hour+24
@@ -46,6 +55,7 @@ def sleep_time_convert(now,get_hour,get_minute):
         sleep_hour=sleep_hour-1
     sleep_time=sleep_hour*3600+sleep_minute*60
     return [sleep_time,sleep_hour,sleep_minute]
+
 def localtime():
     try:
         get_hour=int(input("Please Enter Hour :"))
@@ -55,9 +65,7 @@ def localtime():
         get_minute=int(input("Please Enter Minute :"))
     except ValueError:
         get_minute=0
-    date_time=datetime.datetime.now()
-    now=str(date_time.time()).split(":")
-    sleep_time=sleep_time_convert(now,get_hour,get_minute)
+    sleep_time=sleep_time_convert(get_hour,get_minute)
     flag=get_method()
     sub.Popen("shutdown "+flag+" -f -t "+str(sleep_time[0]),shell=True)
     print_time(sleep_time[1:],flag)
@@ -66,11 +74,13 @@ def localtime():
 
 if __name__=="__main__":
     try:
-        input1=int(input("Duration[1] or LocalTime[2]"))
+        input1=int(input("Duration[1] or LocalTime[2] or Instantly[3]"))
     except ValueError:
         input1=1
     if input1==1:
         duration()
-    else:
+    elif input1==2:
         localtime()
+    else:
+        instantly()
     
