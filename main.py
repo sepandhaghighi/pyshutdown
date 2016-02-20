@@ -12,7 +12,7 @@ def get_method():
     get_method=input("Please Enter Method , Shutdown[1] , Hibernate[2] , Restart[3]")
     if get_method=="2":
         flag="-h"
-    elif flag=="3":
+    elif get_method=="3":
         flag="-r"
     else:
         flag="-s"
