@@ -1,11 +1,11 @@
 import datetime
-from time import sleep
+import time
 import subprocess as sub
 import sys
 
 flag_dict={"-r":"Restart","-h":"Hibernate","-s":"Shutdown"}
 def cancel():
-    c_input=input("Press any key to cancel process")
+    c_input=input("Press Ctrl+C to cancel process")
     sub.Popen("shutdown -a",shell=True)
 def get_method():
     flag=""
@@ -31,7 +31,11 @@ def duration():
     sleep_time=get_hour*3600+get_minute*60
     flag=get_method()
     print_time([get_hour,get_minute],flag)
-    sub.Popen("shutdown "+flag+" -f -t "+str(sleep_time),shell=True)
+    if flag=="-h":
+        time.sleep(float(sleep_time))
+        sub.Popen("shutdown -h -f",shell=True)
+    else:
+        sub.Popen("shutdown "+flag+" -f -t "+str(sleep_time),shell=True)
     cancel()
 
 def instantly():
@@ -67,8 +71,13 @@ def localtime():
         get_minute=0
     sleep_time=sleep_time_convert(get_hour,get_minute)
     flag=get_method()
-    sub.Popen("shutdown "+flag+" -f -t "+str(sleep_time[0]),shell=True)
     print_time(sleep_time[1:],flag)
+    if flag=="-h":
+        time.sleep(sleep_time[0])
+        sub.Popen("shutdown -h -f",shell=True)
+    else:
+        sub.Popen("shutdown "+flag+" -f -t "+str(sleep_time[0]),shell=True)
+    
     cancel()
 
 
@@ -77,10 +86,19 @@ if __name__=="__main__":
         input1=int(input("Duration[1] or LocalTime[2] or Instantly[3]"))
     except ValueError:
         input1=1
-    if input1==1:
-        duration()
-    elif input1==2:
-        localtime()
-    else:
-        instantly()
+    except KeyboardInterrupt:
+        print("pyshut terminated!!")
+        sys.exit()
+    try:
+        if input1==1:
+            duration()
+        elif input1==2:
+            localtime()
+        else:
+            instantly()
+    except KeyboardInterrupt:
+        print("pyshut terminated!!")
+        sub.Popen("shutdown -a",shell=True)
+        sys.exit()
+    
     
