@@ -34,6 +34,7 @@ def duration():
     if flag=="-h":
         time.sleep(float(sleep_time))
         sub.Popen("shutdown -h -f",shell=True)
+        sys.exit()
     else:
         sub.Popen("shutdown "+flag+" -f -t "+str(sleep_time),shell=True)
     cancel()
