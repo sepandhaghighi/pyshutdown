@@ -1,9 +1,17 @@
 # pyshutdown
 
+----------
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sepandhaghighi/pyshutdown/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sepandhaghighi/pyshutdown/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/sepandhaghighi/pyshutdown/badges/build.png?b=master)](https://scrutinizer-ci.com/g/sepandhaghighi/pyshutdown/build-status/master)
+[![PyPI version](https://badge.fury.io/py/shutdown.svg)](https://badge.fury.io/py/shutdown)	
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/sepandhaghighi/pyshutdown/blob/master/LICENSE)
 
+						
 Python shutdown library
 
-Version : V1.1					
+
+Version : V1.1			
+		
 
 [Download](https://github.com/sepandhaghighi/pyshutdown/archive/v1.1.zip)
 
