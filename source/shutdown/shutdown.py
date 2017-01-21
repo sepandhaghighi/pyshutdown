@@ -1,6 +1,8 @@
 import subprocess as sub
 
+
 def shutdown(time=0,force=False,warning_off=False):
+    # TODO: solve unix version problem
     '''
 
     :param time: int , Time in second for shutdown
@@ -27,6 +29,7 @@ def shutdown(time=0,force=False,warning_off=False):
     except:
         return False
 def restart(time=0,force=False):
+    # TODO: solve unix version problem
     '''
 
     :param time: int , Time in second for restart
@@ -46,6 +49,7 @@ def restart(time=0,force=False):
     except :
         return False
 def hibernate(force=False):
+    # TODO: solve unix version problem
     '''
 
     :param force: bool ,True for Force hibernate
@@ -64,6 +68,7 @@ def hibernate(force=False):
     except:
         return False
 def logoff(force=False):
+    # TODO: solve unix version problem
     '''
 
     :param force: bool ,True for Force logoff
@@ -83,6 +88,7 @@ def logoff(force=False):
         return False
 
 def cancel():
+    # TODO: solve unix version problem
     '''
 
     :return: bool , True (Successfully) False(Unsuccessfully)
