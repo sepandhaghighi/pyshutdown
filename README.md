@@ -18,8 +18,15 @@ Version : V1.1
 
 ----------
 ## Installation ##
-- Build source file `python setup.py install`
-- Install from pip `pip install shutdown`						
+From source file :
+
+`git clone https://github.com/sepandhaghighi/pyshutdown.git`
+						
+ `python setup.py install`
+
+From PyPI:	
+						
+ `pip install shutdown`						
 
 ## Usage ##
 - import shutdown lib `from shutdown import *`
