@@ -5,6 +5,7 @@
 [![Build Status](https://scrutinizer-ci.com/g/sepandhaghighi/pyshutdown/badges/build.png?b=master)](https://scrutinizer-ci.com/g/sepandhaghighi/pyshutdown/build-status/master)
 [![PyPI version](https://badge.fury.io/py/shutdown.svg)](https://badge.fury.io/py/shutdown)	
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/sepandhaghighi/pyshutdown/blob/master/LICENSE)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/478dc165527b4c2fb67a336d7c88e7cd)](https://www.codacy.com/app/sepand-haghighi/pyshutdown?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sepandhaghighi/pyshutdown&amp;utm_campaign=Badge_Grade)
 
 						
 Python shutdown library
