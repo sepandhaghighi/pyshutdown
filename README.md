@@ -27,3 +27,4 @@ Version : V1.1
 - hibernate function `hibernate(force=False)`
 - logoff function `logoff(force=False)`
 - cancel any shutdown process `cancel()`
+![](http://www.shaghighi.ir/shutdown/shutdown.gif)
