@@ -11,10 +11,13 @@
 Python shutdown library
 
 
-Version : V1.1			
+Version : V1.1 		
 		
 
 [Download](https://github.com/sepandhaghighi/pyshutdown/archive/v1.1.zip)
+
+<p style="color:red;">This version only work in windows</p>
+
 
 ----------
 ## Installation ##
@@ -29,7 +32,7 @@ From PyPI:
  `pip install shutdown`						
 
 ## Usage ##
-- import shutdown lib `from shutdown import *`
+- import shutdown lib `python from shutdown import *`
 - shutdown function `shutdown(time=your_time,force=False,warning_off=False)`
 - restart function `restart(time=your_time,force=False)`
 - hibernate function `hibernate(force=False)`
