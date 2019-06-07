@@ -1,6 +1,7 @@
 # pyshutdown
 
 ----------
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/478dc165527b4c2fb67a336d7c88e7cd)](https://www.codacy.com/app/sepand-haghighi/pyshutdown?utm_source=github.com&utm_medium=referral&utm_content=sepandhaghighi/pyshutdown&utm_campaign=badger)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sepandhaghighi/pyshutdown/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sepandhaghighi/pyshutdown/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/sepandhaghighi/pyshutdown/badges/build.png?b=master)](https://scrutinizer-ci.com/g/sepandhaghighi/pyshutdown/build-status/master)
 [![PyPI version](https://badge.fury.io/py/shutdown.svg)](https://badge.fury.io/py/shutdown)	
