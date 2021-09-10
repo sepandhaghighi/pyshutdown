@@ -1,4 +1,5 @@
 import subprocess as sub
+from sys import platform
 
 
 def shutdown(time=0,force=False,warning_off=False):
@@ -94,6 +95,8 @@ def cancel():
     :return: bool , True (Successfully) False(Unsuccessfully)
     '''
     command="shutdown -a"
+    if platform == "linux" or "darwin": #macos software name is darwin , it will work probably
+        command="shutdown -c"
     try:
         response=sub.Popen(command,shell=True,stderr=sub.PIPE,stdin=sub.PIPE,stdout=sub.PIPE)
         response = list(response.communicate())
